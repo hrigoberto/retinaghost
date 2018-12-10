@@ -1,28 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Gallery from 'react-photo-gallery';
+import PHOTO_SET from './photoSet';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const App = () => {
+  return (
+    <div>
+      <div className="ui container" style={{ background: "black", margin: "60px"}}>
+        <div className="ui segment" style={{background: "black"}}>
+          <h1 className="ui center aligned header" style={{color : "white"}}>
+            RETINA GHOST
+          </h1>
+        </div>
+        <Gallery photos={PHOTO_SET} direction="column" margin="3"/>
       </div>
-    );
-  }
+    </div>
+  )
 }
 
 export default App;
